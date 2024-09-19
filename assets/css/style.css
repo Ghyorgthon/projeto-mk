@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.carousel{
+    height: 100vh;
+}
+
+.item .image{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    transform: translateY(100%);
+}
+
+.item .image::before{
+    content: '';
+    width: 500px;
+    position: absolute;
+    right: 22%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    filter: blur(200px);
+}
+
+.item.active .image{
+    transform: translateY(0);
+}
+.item:nth-child(1) .image{
+    background: #3873A5;
+}
+.item:nth-child(2) .image{
+    background: yellow;
+}
+.item:nth-child(3) .image{
+    background: red;
+}
+.item:nth-child(4) .image{
+    background: #CF00;
+}
+.item:nth-child(5) .image{
+    background: #642B27;
+}
+
+.image img{
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(0 0 10px rgba(0,0,0.2));
+    transform: translateX(20%);
+    height: 750px;
+}
+
+.item .info-box{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 450px;
+    height: 280px;
+    z-index: 1;
+}
+
+
+.info-slider .info-item{
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.info-item h2{
+    font-size: 60px;
+    line-height: 1;
+}
+.info-item p{
+    font-size: 16px;
+    margin: 15px 0 20px; 
+}
+.info-item button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 47px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 16px;
+    font-weight: 600;
+}
+.info-item a{
+    text-decoration: none;
+}
+
+.select-pers{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    list-style: none;
+
+}
+
+.select-pers li{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    overflow: hidden;
+    object-fit: cover;
+    margin: 25px 0;
+}
+
+.select-pers li.selected{
+    border: 2px solid #fff;
+}
+
+.select-pers li img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
